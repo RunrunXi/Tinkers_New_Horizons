@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersnh:energetic_alloy",
+  "result": {
+    "amount": 90,
+    "tag": "forge:molten_energetic_alloy"
+  },
+  "temperature": 550
+}
