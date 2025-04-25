@@ -1,0 +1,6 @@
+// 1.20.1	2025-04-24T02:10:16.7838167	Tags for minecraft:block mod id tinkersnh
+f884f77193ab3e55edc91016536349d54535d0e6 data/forge/tags/blocks/needs_netherite_tool.json
+1727ea2dd1d61a88f16e9e6b38832e30f906858f data/forge/tags/blocks/ores.json
+f884f77193ab3e55edc91016536349d54535d0e6 data/forge/tags/blocks/ores/uelibloom.json
+f884f77193ab3e55edc91016536349d54535d0e6 data/forge/tags/blocks/ore_rates/singular.json
+f884f77193ab3e55edc91016536349d54535d0e6 data/minecraft/tags/blocks/mineable/pickaxe.json

@@ -1,0 +1,13 @@
+{
+  "modifier.tinkersnh": {
+    "energetic": "#E69949",
+    "blessing_of_life_armor": "#517F45",
+    "blessing_of_life_tool": "#517F45"
+  },
+
+  "material.tinkersnh": {
+    "uelibloom": "#517F45",
+    "__tier_2__": null,
+    "energetic_alloy": "#E69949"
+  }
+}

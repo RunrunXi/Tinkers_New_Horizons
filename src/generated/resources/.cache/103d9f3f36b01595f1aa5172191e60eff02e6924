@@ -1,0 +1,4 @@
+// 1.20.1	2025-04-24T01:15:19.3560311	Registries
+d7c618b5ac4f5d073ae81843bcdb33d55d79c522 data/tinkersnh/forge/biome_modifier/add_uelibloom_ore.json
+b0b60848b509966f67829f3ef5eb50aa367766ce data/tinkersnh/worldgen/configured_feature/uelibloom_ore.json
+3b437201d35aaaad902b488422abc4e84baf3c64 data/tinkersnh/worldgen/placed_feature/uelibloom_ore_placed.json
