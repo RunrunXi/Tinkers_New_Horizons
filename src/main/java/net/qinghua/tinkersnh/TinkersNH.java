@@ -51,6 +51,7 @@ public class TinkersNH {
                         /* 添加物品-锭 */
                         output.accept(TinkersNH_Items.ENERGETIC_ALLOY_INGOT.get());
                         output.accept(TinkersNH_Items.UELIBLOOM_INGOT.get());
+                        output.accept(TinkersNH_Items.GRAVITONSTEEL_INGOT.get());
                         /* 添加物品-粒 */
                         output.accept(TinkersNH_Items.UELIBLOOM_NUGGET.get());
 
@@ -65,6 +66,7 @@ public class TinkersNH {
                         /* 添加流体桶 */
                         output.accept(Objects.requireNonNull(TinkersNH_Fluid.MOLTEN_ENERGETIC_ALLOY.getBucket()));
                         output.accept(Objects.requireNonNull(TinkersNH_Fluid.MOLTEN_UELIBLOOM.getBucket()));
+                        output.accept(Objects.requireNonNull(TinkersNH_Fluid.MOLTEN_GRAVITONSTEEL.getBucket()));
 
                     })
                     .build()

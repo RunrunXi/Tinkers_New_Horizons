@@ -20,6 +20,8 @@ public class ModTags {
 
         public static final TagKey<Item> ORES_UELIBLOOM = common("ores/uelibloom");
 
+        // 亚金
+        public static final TagKey<Item> INGOTS_GRAVITONSTEEL = common("ingots/gravitonsteel");
 
         public static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(TinkersNH.MOD_ID, name));

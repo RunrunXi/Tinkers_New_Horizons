@@ -13,6 +13,7 @@ public class MaterialDataProvider extends AbstractMaterialDataProvider {
     protected void addMaterials() {
         addMaterial(MaterialIds.energetic_alloy, 2, ORDER_SPECIAL, false);
         addMaterial(MaterialIds.uelibloom, 5, ORDER_SPECIAL, false);
+        addMaterial(MaterialIds.gravitonsteel, 4, ORDER_SPECIAL, false);
     }
 
     @Override

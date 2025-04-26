@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tinkersnh:gravitonsteel",
+  "result": {
+    "amount": 90,
+    "tag": "forge:molten_gravitonsteel"
+  },
+  "temperature": 1300
+}

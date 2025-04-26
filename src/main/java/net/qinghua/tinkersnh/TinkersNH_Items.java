@@ -18,6 +18,9 @@ public class TinkersNH_Items {
     // 龙蒿
     public static final RegistryObject<Item> UELIBLOOM_INGOT =
             ITEMS.register("uelibloom_ingot", () -> new Item(new Item.Properties()));
+    // 亚金-引力子钢
+    public static final RegistryObject<Item> GRAVITONSTEEL_INGOT =
+            ITEMS.register("gravitonsteel_ingot", () -> new Item(new Item.Properties()));
     /* 粒 */
     public static final RegistryObject<Item> UELIBLOOM_NUGGET =
             ITEMS.register("uelibloom_nugget", () -> new Item(new Item.Properties()));

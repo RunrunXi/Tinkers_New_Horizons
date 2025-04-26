@@ -22,8 +22,9 @@ public class MaterialTraitsDataProvider extends AbstractMaterialTraitDataProvide
 
     @Override
     protected void addMaterialTraits() {
+        // 充能合金
         addDefaultTraits(MaterialIds.energetic_alloy, ModifierIds.energetic);
-//        addDefaultTraits(MaterialIds.uelibloom, ModifierIds.blessingOfLifeArmor);
+        // 龙蒿
         addTraits(MaterialIds.uelibloom, ARMOR, ModifierIds.blessingOfLifeArmor);
         addTraits(MaterialIds.uelibloom, MELEE_HARVEST, ModifierIds.blessingOfLifeTool);
     }

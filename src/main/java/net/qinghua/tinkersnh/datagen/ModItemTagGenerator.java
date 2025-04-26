@@ -24,23 +24,35 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         /* TinkersNH */
         // Items
+        // 充能合金锭
         this.tag(ModTags.Items.INGOTS_ENERGETIC_ALLOY)
                 .add(TinkersNH_Items.ENERGETIC_ALLOY_INGOT.get());
+        // 龙蒿锭
         this.tag(ModTags.Items.INGOTS_UELIBLOOM)
                 .add(TinkersNH_Items.UELIBLOOM_INGOT.get());
+        // 龙蒿粒
         this.tag(ModTags.Items.NUGGETS_UELIBLOOM)
                 .add(TinkersNH_Items.UELIBLOOM_NUGGET.get());
+        // 亚金
+        this.tag(ModTags.Items.INGOTS_GRAVITONSTEEL)
+                .add(TinkersNH_Items.GRAVITONSTEEL_INGOT.get());
         // BlockItems
+        // 龙蒿矿石
         this.tag(ModTags.Items.ORES_UELIBLOOM)
                 .add(TinkersNH_Blocks.UELIBLOOM_ORE.get().asItem());
+
         /* Forge  */
         // Items
+        // 锭
         this.tag(Tags.Items.INGOTS)
                 .addTag(ModTags.Items.INGOTS_UELIBLOOM)
-                .addTag(ModTags.Items.INGOTS_ENERGETIC_ALLOY);
+                .addTag(ModTags.Items.INGOTS_ENERGETIC_ALLOY)
+                .addTag(ModTags.Items.INGOTS_GRAVITONSTEEL);
+        // 粒
         this.tag(Tags.Items.NUGGETS)
                 .addTag(ModTags.Items.NUGGETS_UELIBLOOM);
         // BlockItems
+        // 矿石
         this.tag(Tags.Items.ORES)
                 .addTag(ModTags.Items.ORES_UELIBLOOM);
 

@@ -47,4 +47,13 @@ public class TinkersNH_Fluid {
                     .bucket()
                     .commonTag()
                     .flowing();
+
+    // 亚金
+    public static final FlowingFluidObject<ForgeFlowingFluid> MOLTEN_GRAVITONSTEEL =
+            FLUIDS.register("molten_gravitonsteel")
+                    .type(hot().lightLevel(15))
+                    .block(createBurning(MapColor.COLOR_PURPLE, 12, 6, 6f))
+                    .bucket()
+                    .commonTag()
+                    .flowing();
 }

@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(TinkersNH_Items.ENERGETIC_ALLOY_INGOT);
         simpleItem(TinkersNH_Items.UELIBLOOM_INGOT);
         simpleItem(TinkersNH_Items.UELIBLOOM_NUGGET);
+        simpleItem(TinkersNH_Items.GRAVITONSTEEL_INGOT);
     }
 
     private void simpleItem(RegistryObject<Item> item) {

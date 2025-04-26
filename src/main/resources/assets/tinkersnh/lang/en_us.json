@@ -36,5 +36,9 @@
   "modifier.tinkersnh.blessing_of_life_tool.flavor": "Jungle-forged metal mystically enhances your vitality",
   "modifier.tinkersnh.blessing_of_life_tool.description": "Increases maximum health by one heart per level",
 
-  "effect.tinkersnh.heavy_of_blessing": "Heavy of Blessing"
+  "effect.tinkersnh.heavy_of_blessing": "Heavy of Blessing",
+
+  "item.tinkersnh.gravitonsteel_ingot": "Gravitonsteel Ingot",
+  "item.tinkersnh.molten_gravitonsteel_bucket": "Molten Gravitonsteel Bucket",
+  "fluid_type.tinkersnh.molten_gravitonsteel": "Molten Gravitonsteel"
 }

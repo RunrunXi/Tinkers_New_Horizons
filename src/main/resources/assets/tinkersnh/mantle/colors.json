@@ -6,8 +6,11 @@
   },
 
   "material.tinkersnh": {
-    "uelibloom": "#517F45",
     "__tier_2__": null,
-    "energetic_alloy": "#E69949"
+    "energetic_alloy": "#E69949",
+    "__tier_4__": null,
+    "gravitonsteel": "#2D0A50",
+    "__tier_5__": null,
+    "uelibloom": "#517F45"
   }
 }

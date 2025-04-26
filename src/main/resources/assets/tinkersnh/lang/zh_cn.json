@@ -36,5 +36,9 @@
   "modifier.tinkersnh.blessing_of_life_tool.flavor": "源于丛林的神秘金属使得你更加强大",
   "modifier.tinkersnh.blessing_of_life_tool.description": "每级增加一颗心生命上限",
 
-  "effect.tinkersnh.heavy_of_blessing": "赐福之重"
+  "effect.tinkersnh.heavy_of_blessing": "赐福之重",
+
+  "item.tinkersnh.gravitonsteel_ingot": "亚金锭",
+  "item.tinkersnh.molten_gravitonsteel_bucket": "熔融亚金桶",
+  "fluid_type.tinkersnh.molten_gravitonsteel": "熔融亚金"
 }

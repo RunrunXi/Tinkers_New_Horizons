@@ -25,10 +25,12 @@ public class ModFluidTagProvider extends FluidTagProvider {
         // tinkers_nh
         this.fluidTag(TinkersNH_Fluid.MOLTEN_ENERGETIC_ALLOY);
         this.fluidTag(TinkersNH_Fluid.MOLTEN_UELIBLOOM);
+        this.fluidTag(TinkersNH_Fluid.MOLTEN_GRAVITONSTEEL);
         // 匠魂 tooltips
         this.tag(TinkerTags.Fluids.METAL_TOOLTIPS).addTags(
                 TinkersNH_Fluid.MOLTEN_UELIBLOOM.getTag(),
-                TinkersNH_Fluid.MOLTEN_ENERGETIC_ALLOY.getTag()
+                TinkersNH_Fluid.MOLTEN_ENERGETIC_ALLOY.getTag(),
+                TinkersNH_Fluid.MOLTEN_GRAVITONSTEEL.getTag()
         );
     }
 
