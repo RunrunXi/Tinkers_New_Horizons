@@ -57,7 +57,7 @@ public class MaterialStatsDataProvider extends AbstractMaterialStatsDataProvider
 
     // 杂项
     private void addMisc() {
-
+        addMaterialStats(MaterialIds.gravitonsteel);
     }
 
     @Override

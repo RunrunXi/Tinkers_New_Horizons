@@ -27,6 +27,8 @@ public class MaterialTraitsDataProvider extends AbstractMaterialTraitDataProvide
         // 龙蒿
         addTraits(MaterialIds.uelibloom, ARMOR, ModifierIds.blessingOfLifeArmor);
         addTraits(MaterialIds.uelibloom, MELEE_HARVEST, ModifierIds.blessingOfLifeTool);
+        // 亚金
+        noTraits(MaterialIds.gravitonsteel);
     }
 
     @Override

@@ -33,8 +33,8 @@ public class TinkersNH_Fluid {
     // 充能合金
     public static final FlowingFluidObject<ForgeFlowingFluid> MOLTEN_ENERGETIC_ALLOY =
             FLUIDS.register("molten_energetic_alloy")
-                    .type(hot().lightLevel(15))
-                    .block(createBurning(MapColor.COLOR_ORANGE, 12, 6, 6f))
+                    .type(hot().lightLevel(12).temperature(850))
+                    .block(createBurning(MapColor.COLOR_ORANGE, 12, 10, 6f))
                     .bucket()
                     .commonTag()
                     .flowing();
@@ -42,8 +42,8 @@ public class TinkersNH_Fluid {
     // 龙蒿
     public static final FlowingFluidObject<ForgeFlowingFluid> MOLTEN_UELIBLOOM =
             FLUIDS.register("molten_uelibloom")
-                    .type(hot().lightLevel(15))
-                    .block(createBurning(MapColor.COLOR_GREEN, 12, 6, 6f))
+                    .type(hot().lightLevel(12).temperature(1600))
+                    .block(createBurning(MapColor.COLOR_GREEN, 12, 10, 8f))
                     .bucket()
                     .commonTag()
                     .flowing();
@@ -51,8 +51,8 @@ public class TinkersNH_Fluid {
     // 亚金
     public static final FlowingFluidObject<ForgeFlowingFluid> MOLTEN_GRAVITONSTEEL =
             FLUIDS.register("molten_gravitonsteel")
-                    .type(hot().lightLevel(15))
-                    .block(createBurning(MapColor.COLOR_PURPLE, 12, 6, 6f))
+                    .type(hot().lightLevel(12).temperature(1600))
+                    .block(createBurning(MapColor.COLOR_PURPLE, 12, 10, 8f))
                     .bucket()
                     .commonTag()
                     .flowing();

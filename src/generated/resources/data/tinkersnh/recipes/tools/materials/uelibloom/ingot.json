@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:ingots/uelibloom"
+  },
+  "material": "tinkersnh:uelibloom",
+  "needed": 1,
+  "value": 1
+}
