@@ -2,7 +2,7 @@
 
 ![Minecraft 1.20.1](https://img.shields.io/badge/Minecraft-1.20.1-green?logo=minecraft)
 ![Forge](https://img.shields.io/badge/Forge-47.4.0-orange?logo=curseforge)
-[![License](https://img.shields.io/github/license/RunrunXi/Tinkers-New-Horizons)](LICENSE)
+[![License](https://img.shields.io/github/license/RunrunXi/Tinkers_New_Horizons)](LICENSE)
 
 为匠魂模组（Tinkers' Construct）添加全新材料和特性的扩展模组，带来更丰富的工具打造体验！
 
