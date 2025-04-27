@@ -73,7 +73,6 @@ public class BlessingOfLifeToolModifier extends Modifier implements InventoryTic
 
     @Override
     protected void registerHooks(ModuleHookMap.@NotNull Builder hookBuilder) {
-        super.registerHooks(hookBuilder);
         hookBuilder.addHook(this, ModifierHooks.INVENTORY_TICK);
     }
 

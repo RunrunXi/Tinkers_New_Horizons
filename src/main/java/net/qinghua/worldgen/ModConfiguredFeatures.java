@@ -24,10 +24,11 @@ public class ModConfiguredFeatures {
         // 替换深板岩
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
+        // 龙蒿生成-可替换的方块，矿石
         List<OreConfiguration.TargetBlockState> overworldUelibloomOres = List.of(
                 OreConfiguration.target(deepslateReplaceables, TinkersNH_Blocks.UELIBLOOM_ORE.get().defaultBlockState()));
-
-        register(context, OVERWORLD_UELIBLOOM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldUelibloomOres, 4));
+        // 注册生成-调整一个矿簇的大小
+        register(context, OVERWORLD_UELIBLOOM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldUelibloomOres, 2));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

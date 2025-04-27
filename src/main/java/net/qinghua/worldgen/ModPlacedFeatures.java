@@ -24,8 +24,10 @@ public class ModPlacedFeatures {
         
         // 注册矿石
         register(context, UELIBLOOM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_UELIBLOOM_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(2,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(-54))));
+                /* 每个区块尝试生成次数 */
+                ModOrePlacement.commonOrePlacement(1,
+                        /* 尝试在区块指定高度范围内生成 */
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(-54))));
     }
 
 
