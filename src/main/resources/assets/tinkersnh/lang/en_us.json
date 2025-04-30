@@ -40,5 +40,13 @@
 
   "item.tinkersnh.gravitonsteel_ingot": "Gravitonsteel Ingot",
   "item.tinkersnh.molten_gravitonsteel_bucket": "Molten Gravitonsteel Bucket",
-  "fluid_type.tinkersnh.molten_gravitonsteel": "Molten Gravitonsteel"
+  "fluid_type.tinkersnh.molten_gravitonsteel": "Molten Gravitonsteel",
+
+  "modifier.tinkersnh.gravitic_amplification": "Gravitic Amplification",
+  "modifier.tinkersnh.gravitic_amplification.flavor": "The era where only axes could break shields is over!",
+  "modifier.tinkersnh.gravitic_amplification.description": "Equipment damage increases by 40%, gains shield breaking ability, and gains Slow II when held.",
+
+  "modifier.tinkersnh.bulwark_bastion": "Bulwark Bastion",
+  "modifier.tinkersnh.bulwark_bastion.flavor": "I will not fall!",
+  "modifier.tinkersnh.bulwark_bastion.description": "+1 armor toughness and knockback resistance"
 }

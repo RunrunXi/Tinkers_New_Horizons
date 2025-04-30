@@ -4,23 +4,31 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.crafting.CompoundIngredient;
+import net.minecraftforge.common.crafting.IntersectionIngredient;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.qinghua.tinkersnh.TinkersNH;
 import net.qinghua.tinkersnh.TinkersNH_Fluid;
 import net.qinghua.tinkersnh.TinkersNH_Items;
+import net.qinghua.tinkersnh.TinkersNH_Modifiers;
 import net.qinghua.tinkersnh.datagen.material.MaterialIds;
 import net.qinghua.tinkersnh.util.ModTags;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.mantle.registration.object.FlowingFluidObject;
+import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.library.recipe.FluidValues;
+import slimeknights.tconstruct.library.recipe.alloying.AlloyRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.melting.IMeltingContainer;
 import slimeknights.tconstruct.library.recipe.melting.MeltingRecipeBuilder;
+import slimeknights.tconstruct.library.recipe.modifiers.adding.ModifierRecipeBuilder;
+import slimeknights.tconstruct.library.tools.SlotType;
 import slimeknights.tconstruct.smeltery.TinkerSmeltery;
 
 import java.util.function.Consumer;
@@ -33,13 +41,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> pWriter) {
         // 原版配方
+        // 工作台
         addMaterialRecipes(pWriter);
 
         // 匠魂材料
+        // 材料价值?
         addMaterialItems(pWriter);
+        // 材料对应流体?
         addMaterialSmeltery(pWriter);
+        // 材料浇筑配方
         addCastingRecipes(pWriter);
+        // 材料熔炼配方
         addMeltingRecipes(pWriter);
+        // 合金配方
+        addAlloyRecipes(pWriter);
+        // 强化配方
+        addModifierRecipes(pWriter);
     }
 
     private void addMaterialRecipes(Consumer<FinishedRecipe> pWriter) {
@@ -125,6 +142,59 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         MeltingRecipeBuilder.melting(
                 Ingredient.of(ModTags.Items.NUGGETS_UELIBLOOM), TinkersNH_Fluid.MOLTEN_UELIBLOOM, FluidValues.NUGGET)
                 .save(consumer, location(folder + "uelibloom/nugget"));
+    }
+
+    // 合金配方
+    private void addAlloyRecipes(Consumer<FinishedRecipe> consumer) {
+        String folder = "smeltery/alloys/";
+
+        // 亚金 = 200mB熔融黑曜石，200mB熔融玫瑰金，90mB熔融玛玉灵
+        AlloyRecipeBuilder.alloy(TinkersNH_Fluid.MOLTEN_GRAVITONSTEEL, FluidValues.INGOT)
+                .addInput(TinkerFluids.moltenObsidian.ingredient(200))
+                .addInput(TinkerFluids.moltenRoseGold.ingredient(200))
+                .addInput(TinkerFluids.moltenManyullyn.ingredient(FluidValues.INGOT))
+                .save(consumer, prefix(TinkersNH_Fluid.MOLTEN_GRAVITONSTEEL, folder));
+
+    }
+
+    // 强化配方
+    private void addModifierRecipes(Consumer<FinishedRecipe> consumer) {
+        String abilityFolder = "tools/modifiers/ability/";
+        String abilitySalvage = "tools/modifiers/salvage/ability/";
+
+        Ingredient blockWhileCharging = IntersectionIngredient.of(
+                Ingredient.of(TinkerTags.Items.DURABILITY),
+                ingredientFromTags(TinkerTags.Items.INTERACTABLE_RIGHT,
+                        TinkerTags.Items.SHIELDS, TinkerTags.Items.BOWS));
+        // 亚金之力
+        ModifierRecipeBuilder.modifier(TinkersNH_Modifiers.GRAVITIC_AMPLIFICATION)
+                .setTools(blockWhileCharging)
+                .addInput(Items.ANVIL)
+                .addInput(ModTags.Items.INGOTS_GRAVITONSTEEL)
+                .addInput(Items.IRON_SWORD)
+                .setMaxLevel(1).checkTraitLevel()
+                .setSlots(SlotType.ABILITY, 1)
+                .saveSalvage(consumer, prefix(TinkersNH_Modifiers.GRAVITIC_AMPLIFICATION, abilitySalvage))
+                .save(consumer, prefix(TinkersNH_Modifiers.GRAVITIC_AMPLIFICATION, abilityFolder));
+        // 亚金之力-护甲
+        ModifierRecipeBuilder.modifier(TinkersNH_Modifiers.BULWARK_BASTION)
+                .setTools(ingredientFromTags(TinkerTags.Items.ARMOR))
+                .addInput(Items.ANVIL)
+                .addInput(ModTags.Items.INGOTS_GRAVITONSTEEL)
+                .addInput(Items.IRON_SWORD)
+                .setMaxLevel(1).checkTraitLevel()
+                .setSlots(SlotType.DEFENSE, 1)
+                .saveSalvage(consumer, prefix(TinkersNH_Modifiers.BULWARK_BASTION, abilitySalvage))
+                .save(consumer, prefix(TinkersNH_Modifiers.BULWARK_BASTION, abilityFolder));
+    }
+
+    @SafeVarargs
+    private static Ingredient ingredientFromTags(TagKey<Item>... tags) {
+        Ingredient[] tagIngredients = new Ingredient[tags.length];
+        for (int i = 0; i < tags.length; i++) {
+            tagIngredients[i] = Ingredient.of(tags[i]);
+        }
+        return CompoundIngredient.of(tagIngredients);
     }
 
     public @NotNull String getModId() {

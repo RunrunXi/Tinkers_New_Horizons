@@ -11,6 +11,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 import net.qinghua.tinkersnh.TinkersNH;
 import slimeknights.mantle.Mantle;
+import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.modifiers.ModifierManager;
+
+import static slimeknights.tconstruct.TConstruct.getResource;
 
 public class ModTags {
     public static class Items {
@@ -54,6 +58,12 @@ public class ModTags {
         }
     }
 
+    public static class Modifiers {
+        public static final TagKey<Modifier> MELEE_ABILITIES = tag("abilities/melee");
 
+        public static TagKey<Modifier> tag(String name) {
+            return ModifierManager.getTag(getResource(name));
+        }
+    }
 
 }

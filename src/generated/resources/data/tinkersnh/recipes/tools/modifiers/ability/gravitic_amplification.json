@@ -1,0 +1,40 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "item": "minecraft:anvil"
+    },
+    {
+      "tag": "forge:ingots/gravitonsteel"
+    },
+    {
+      "item": "minecraft:iron_sword"
+    }
+  ],
+  "level": 1,
+  "result": "tinkersnh:gravitic_amplification",
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "type": "forge:intersection",
+    "children": [
+      {
+        "tag": "tconstruct:modifiable/durability"
+      },
+      [
+        {
+          "tag": "tconstruct:modifiable/interactable/right"
+        },
+        {
+          "tag": "tconstruct:modifiable/shields"
+        },
+        {
+          "tag": "tconstruct:modifiable/ranged/bows"
+        }
+      ]
+    ]
+  }
+}

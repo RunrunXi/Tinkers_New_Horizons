@@ -40,5 +40,13 @@
 
   "item.tinkersnh.gravitonsteel_ingot": "亚金锭",
   "item.tinkersnh.molten_gravitonsteel_bucket": "熔融亚金桶",
-  "fluid_type.tinkersnh.molten_gravitonsteel": "熔融亚金"
+  "fluid_type.tinkersnh.molten_gravitonsteel": "熔融亚金",
+
+  "modifier.tinkersnh.gravitic_amplification": "亚金之力",
+  "modifier.tinkersnh.gravitic_amplification.flavor": "只有大斧头能破盾的世代结束了！",
+  "modifier.tinkersnh.gravitic_amplification.description": "装备伤害+40%，获得破盾能力，持有时获得缓慢II",
+
+  "modifier.tinkersnh.bulwark_bastion": "卫士之力",
+  "modifier.tinkersnh.bulwark_bastion.flavor": "我，屹立不倒！",
+  "modifier.tinkersnh.bulwark_bastion.description": "盔甲韧性+1，击退抗性+1"
 }

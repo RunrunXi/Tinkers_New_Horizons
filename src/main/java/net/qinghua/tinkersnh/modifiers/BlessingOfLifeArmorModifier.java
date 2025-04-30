@@ -11,7 +11,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.qinghua.tinkersnh.TinkersNH_Effects;
-import net.qinghua.tinkersnh.TinkersNH_Modifiers;
 import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.modules.technical.ArmorLevelModule;
@@ -104,8 +103,8 @@ public class BlessingOfLifeArmorModifier extends Modifier {
     }
     // 盔甲效果
     public static int onArmorTick(LivingDeathEvent event, LivingEntity player, ToolStack tool, int level) {
-    // 如果工具有免疫死亡效果，并且没有损坏
-        if (tool.getModifierLevel(TinkersNH_Modifiers.BLESSING_OF_LIFE_ARMOR.get()) > 0 && !tool.isBroken()) {
+    // 如果工具没有损坏
+        if (!tool.isBroken()) {
             // 损失护甲耐久
 //            ToolDamageUtil.damageAnimated(tool, tool.getStats().getInt(ToolStats.DURABILITY) / level + 1, player);
             return 1;

@@ -1,0 +1,24 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "item": "minecraft:anvil"
+    },
+    {
+      "tag": "forge:ingots/gravitonsteel"
+    },
+    {
+      "item": "minecraft:iron_sword"
+    }
+  ],
+  "level": 1,
+  "result": "tinkersnh:bulwark_bastion",
+  "slots": {
+    "defense": 1
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/armor"
+  }
+}
