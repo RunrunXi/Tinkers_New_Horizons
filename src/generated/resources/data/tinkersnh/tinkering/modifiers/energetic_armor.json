@@ -1,0 +1,14 @@
+{
+  "level_display": "tconstruct:default",
+  "modules": [
+    {
+      "type": "tconstruct:max_armor_stat",
+      "allow_broken": false,
+      "each_level": 0.05,
+      "held_tag": "tconstruct:modifiable/held",
+      "key": "tconstruct:use_item_speed",
+      "tooltip_style": "percent"
+    }
+  ],
+  "tooltip_display": "always"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:nuggets/energetic_alloy"
+  },
+  "material": "tinkersnh:energetic_alloy",
+  "needed": 9,
+  "value": 1
+}

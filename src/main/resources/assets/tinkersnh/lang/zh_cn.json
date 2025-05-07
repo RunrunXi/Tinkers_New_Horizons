@@ -10,10 +10,15 @@
   "material.tinkersnh.energetic_alloy.flavor": "快一点，再快一点！",
   "material.tinkersnh.energetic_alloy.encyclopedia": "每级的攻击速度和挖掘速度+5%",
   "material.tinkersnh.energetic_alloy.range": "每级的拉弓速度和初速度+5%",
+  "material.tinkersnh.energetic_alloy.armor": "每级移动速度+5%",
 
-  "modifier.tinkersnh.energetic": "充能",
-  "modifier.tinkersnh.energetic.flavor": "再快一点！",
-  "modifier.tinkersnh.energetic.description": "经过充能的黄金，无论是采掘还是射箭，现在它都更快了！",
+  "modifier.tinkersnh.energetic_tool": "充能",
+  "modifier.tinkersnh.energetic_tool.flavor": "再快一点！",
+  "modifier.tinkersnh.energetic_tool.description": "经过充能的黄金，无论是采掘还是射箭，现在它都更快了！",
+
+  "modifier.tinkersnh.energetic_armor": "能量",
+  "modifier.tinkersnh.energetic_armor.flavor": "飞毛腿！",
+  "modifier.tinkersnh.energetic_armor.description": "穿上跑鞋，飞一样的感觉！",
 
   "item.tinkersnh.uelibloom_ingot": "龙蒿锭",
   "item.tinkersnh.uelibloom_nugget": "龙蒿粒",

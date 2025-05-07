@@ -18,10 +18,13 @@ import static slimeknights.tconstruct.TConstruct.getResource;
 
 public class ModTags {
     public static class Items {
+        // 龙蒿
         public static final TagKey<Item> INGOTS_UELIBLOOM = common("ingots/uelibloom");
         public static final TagKey<Item> NUGGETS_UELIBLOOM = common("nuggets/uelibloom");
+        // 充能合金
         public static final TagKey<Item> INGOTS_ENERGETIC_ALLOY = common("ingots/energetic_alloy");
-
+        public static final TagKey<Item> NUGGETS_ENERGETIC_ALLOY = common("nuggets/energetic_alloy");
+        // 矿石-龙蒿
         public static final TagKey<Item> ORES_UELIBLOOM = common("ores/uelibloom");
 
         // 亚金

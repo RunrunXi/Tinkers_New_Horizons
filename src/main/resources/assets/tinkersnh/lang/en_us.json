@@ -10,10 +10,15 @@
   "material.tinkersnh.energetic_alloy.flavor": "Faster and Faster!",
   "material.tinkersnh.energetic_alloy.encyclopedia": "Each level of the Energetic Alloy increases the mining speed and attack speed by 5%",
   "material.tinkersnh.energetic_alloy.range": "Each level of the Energetic Alloy increases the mining speed and attack speed by 5%",
+  "material.tinkersnh.energetic_alloy.armor": "Each level of the Energetic Alloy increases the movement speed by 5%",
 
-  "modifier.tinkersnh.energetic": "Energetic",
-  "modifier.tinkersnh.energetic.flavor": "More Faster!",
-  "modifier.tinkersnh.energetic.description": "The gold has been charged with energy, making it faster for mining and firing arrows.",
+  "modifier.tinkersnh.energetic_tool": "Energetic",
+  "modifier.tinkersnh.energetic_tool.flavor": "More Faster!",
+  "modifier.tinkersnh.energetic_tool.description": "The gold has been charged with energy, making it faster for mining and firing arrows.",
+
+  "modifier.tinkersnh.energetic_armor": "Energy",
+  "modifier.tinkersnh.energetic_armor.flavor": "Faster Speed!",
+  "modifier.tinkersnh.energetic_armor.description": "You feel the power of the gold, and you can move faster than ever before.",
 
   "item.tinkersnh.uelibloom_ingot": "Uelibloom Ingot",
   "item.tinkersnh.uelibloom_nugget": "Uelibloom Nugget",

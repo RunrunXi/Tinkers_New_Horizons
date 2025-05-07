@@ -17,6 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(TinkersNH_Items.ENERGETIC_ALLOY_INGOT);
+        simpleItem(TinkersNH_Items.ENERGETIC_ALLOY_NUGGET);
         simpleItem(TinkersNH_Items.UELIBLOOM_INGOT);
         simpleItem(TinkersNH_Items.UELIBLOOM_NUGGET);
         simpleItem(TinkersNH_Items.GRAVITONSTEEL_INGOT);

@@ -60,19 +60,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     private void addMaterialRecipes(Consumer<FinishedRecipe> pWriter) {
-        // 龙蒿锭
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TinkersNH_Items.UELIBLOOM_INGOT.get())
+        // 充能合金
+        ingot_to_nuggets(pWriter, TinkersNH_Items.ENERGETIC_ALLOY_INGOT.get(), TinkersNH_Items.ENERGETIC_ALLOY_NUGGET.get(), "energetic_alloy");
+        nuggets_to_ingot(pWriter, TinkersNH_Items.ENERGETIC_ALLOY_INGOT.get(), TinkersNH_Items.ENERGETIC_ALLOY_NUGGET.get(), "energetic_alloy");
+        // 龙蒿
+        ingot_to_nuggets(pWriter, TinkersNH_Items.UELIBLOOM_INGOT.get(), TinkersNH_Items.UELIBLOOM_NUGGET.get(), "uelibloom");
+        nuggets_to_ingot(pWriter, TinkersNH_Items.UELIBLOOM_INGOT.get(), TinkersNH_Items.UELIBLOOM_NUGGET.get(), "uelibloom");
+    }
+
+    // 锭合成粒
+    private void ingot_to_nuggets(Consumer<FinishedRecipe> pWriter, Item ingot, Item nugget, String name) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nugget, 9)
+                .requires(ingot)
+                .unlockedBy(getHasName(ingot), has(ingot))
+                .save(pWriter, location("common/materials/" + name + "_nuggets_from_ingot"));
+    }
+    // 粒合成锭
+    private void nuggets_to_ingot(Consumer<FinishedRecipe> pWriter, Item ingot, Item nugget, String name) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingot)
                 .pattern("NNN")
                 .pattern("NNN")
                 .pattern("NNN")
-                .define('N', TinkersNH_Items.UELIBLOOM_NUGGET.get())
-                .unlockedBy(getHasName(TinkersNH_Items.UELIBLOOM_NUGGET.get()), has(TinkersNH_Items.UELIBLOOM_NUGGET.get()))
-                .save(pWriter, location("common/materials/uelibloom_ingot_from_nuggets"));
-        // 龙蒿粒
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, TinkersNH_Items.UELIBLOOM_NUGGET.get(), 9)
-                .requires(TinkersNH_Items.UELIBLOOM_INGOT.get())
-                .unlockedBy(getHasName(TinkersNH_Items.UELIBLOOM_INGOT.get()), has(TinkersNH_Items.UELIBLOOM_INGOT.get()))
-                .save(pWriter, location("common/materials/uelibloom_nuggets_from_ingot"));
+                .define('N', nugget)
+                .unlockedBy(getHasName(nugget), has(nugget))
+                .save(pWriter, location("common/materials/" + name + "_ingot_from_nuggets"));
     }
 
     private void addMaterialItems(@NotNull Consumer<FinishedRecipe> consumer) {
@@ -80,6 +91,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // 充能合金
         materialRecipe(consumer, MaterialIds.energetic_alloy,
                 Ingredient.of(ModTags.Items.INGOTS_ENERGETIC_ALLOY), 1, 1, folder + "energetic_alloy/ingot");
+        materialRecipe(consumer, MaterialIds.energetic_alloy,
+                Ingredient.of(ModTags.Items.NUGGETS_ENERGETIC_ALLOY), 1, 9, folder + "energetic_alloy/nugget");
         // 龙蒿
         materialRecipe(consumer, MaterialIds.uelibloom,
                 Ingredient.of(ModTags.Items.INGOTS_UELIBLOOM), 1, 1, folder + "uelibloom/ingot");
@@ -103,12 +116,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private void addCastingRecipes(Consumer<FinishedRecipe> consumer) {
         String folder = "smeltery/casting/";
         // 浇筑配方
+        // 充能合金
         ingot_cast(consumer, ModTags.Items.INGOTS_ENERGETIC_ALLOY, TinkersNH_Fluid.MOLTEN_ENERGETIC_ALLOY,
                 52, folder, "energetic_alloy");
+        nugget_cast(consumer, ModTags.Items.NUGGETS_ENERGETIC_ALLOY, TinkersNH_Fluid.MOLTEN_ENERGETIC_ALLOY,
+                18, folder, "energetic_alloy");
+        // 龙蒿
         ingot_cast(consumer, ModTags.Items.INGOTS_UELIBLOOM, TinkersNH_Fluid.MOLTEN_UELIBLOOM,
                 72, folder, "uelibloom");
         nugget_cast(consumer, ModTags.Items.NUGGETS_UELIBLOOM, TinkersNH_Fluid.MOLTEN_UELIBLOOM,
                 24, folder, "uelibloom");
+        // 亚金
         ingot_cast(consumer, ModTags.Items.INGOTS_GRAVITONSTEEL, TinkersNH_Fluid.MOLTEN_GRAVITONSTEEL,
                 72, folder, "gravitonsteel");
 
@@ -142,6 +160,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         MeltingRecipeBuilder.melting(
                 Ingredient.of(ModTags.Items.NUGGETS_UELIBLOOM), TinkersNH_Fluid.MOLTEN_UELIBLOOM, FluidValues.NUGGET)
                 .save(consumer, location(folder + "uelibloom/nugget"));
+        MeltingRecipeBuilder.melting(
+                Ingredient.of(ModTags.Items.NUGGETS_ENERGETIC_ALLOY), TinkersNH_Fluid.MOLTEN_ENERGETIC_ALLOY, FluidValues.NUGGET)
+                .save(consumer, location(folder + "energetic_alloy/nugget"));
     }
 
     // 合金配方

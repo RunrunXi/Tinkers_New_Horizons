@@ -46,13 +46,16 @@ public class MaterialStatsDataProvider extends AbstractMaterialStatsDataProvider
 
     // 防具
     private void addArmor() {
+        // 充能合金
+        addArmorShieldStats(MaterialIds.energetic_alloy, PlatingMaterialStats.builder()
+                .durabilityFactor(9)
+                .armor(1, 3, 5, 2), StatlessMaterialStats.MAILLE);
         // 龙蒿
         addArmorShieldStats(MaterialIds.uelibloom, PlatingMaterialStats.builder()
-                        .durabilityFactor(35)
-                        .armor(2, 5, 7, 2)
-                        .toughness(3)
-                        .knockbackResistance(0.05f)
-                , StatlessMaterialStats.MAILLE);
+                .durabilityFactor(35)
+                .armor(2, 5, 7, 2)
+                .toughness(3)
+                .knockbackResistance(0.05f), StatlessMaterialStats.MAILLE);
     }
 
     // 杂项

@@ -1,8 +1,16 @@
 {
-  "default": [
-    {
-      "level": 1,
-      "name": "tinkersnh:energetic"
-    }
-  ]
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "tinkersnh:energetic_armor"
+      }
+    ],
+    "tconstruct:melee_harvest": [
+      {
+        "level": 1,
+        "name": "tinkersnh:energetic_tool"
+      }
+    ]
+  }
 }

@@ -54,6 +54,7 @@ public class TinkersNH {
                         output.accept(TinkersNH_Items.GRAVITONSTEEL_INGOT.get());
                         /* 添加物品-粒 */
                         output.accept(TinkersNH_Items.UELIBLOOM_NUGGET.get());
+                        output.accept(TinkersNH_Items.ENERGETIC_ALLOY_NUGGET.get());
 
                         /* 添加方块物品-块 */
 //                        output.accept(TinkersNH_Blocks.UELIBLOOM_BLOCK.get());

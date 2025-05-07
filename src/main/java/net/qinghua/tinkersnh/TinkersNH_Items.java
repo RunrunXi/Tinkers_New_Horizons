@@ -22,6 +22,10 @@ public class TinkersNH_Items {
     public static final RegistryObject<Item> GRAVITONSTEEL_INGOT =
             ITEMS.register("gravitonsteel_ingot", () -> new Item(new Item.Properties()));
     /* 粒 */
+    // 充能合金
+    public static final RegistryObject<Item> ENERGETIC_ALLOY_NUGGET =
+            ITEMS.register("energetic_alloy_nugget", () -> new Item(new Item.Properties()));
+    // 龙蒿
     public static final RegistryObject<Item> UELIBLOOM_NUGGET =
             ITEMS.register("uelibloom_nugget", () -> new Item(new Item.Properties()));
 }

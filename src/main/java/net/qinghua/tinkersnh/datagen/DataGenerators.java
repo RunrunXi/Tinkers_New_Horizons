@@ -24,6 +24,12 @@ public class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
+        // 方块标签
+        ModBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
+                new ModBlockTagGenerator(packOutput, lookupProvider, TinkersNH.MOD_ID, existingFileHelper));
+        // 物品标签
+        generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+
         // 配方
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
         // 战利品表
@@ -33,11 +39,6 @@ public class DataGenerators {
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
         // 物品模型
         generator.addProvider(event.includeServer(), new ModItemModelProvider(packOutput, TinkersNH.MOD_ID, existingFileHelper));
-        // 方块标签
-        ModBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
-                new ModBlockTagGenerator(packOutput, lookupProvider, TinkersNH.MOD_ID, existingFileHelper));
-        // 物品标签
-        generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
 
         // 流体
         generator.addProvider(event.includeServer(), new ModFluidTagProvider(packOutput, lookupProvider, existingFileHelper));

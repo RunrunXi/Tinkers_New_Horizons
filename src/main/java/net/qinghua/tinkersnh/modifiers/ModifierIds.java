@@ -5,7 +5,8 @@ import slimeknights.tconstruct.library.modifiers.ModifierId;
 
 public class ModifierIds {
     // 充能
-    public static final ModifierId energetic = new ModifierId(TinkersNH.MOD_ID, "energetic");
+    public static final ModifierId energeticTool = new ModifierId(TinkersNH.MOD_ID, "energetic_tool");
+    public static final ModifierId energeticArmor = new ModifierId(TinkersNH.MOD_ID, "energetic_armor");
     // 生命赐福
     public static final ModifierId blessingOfLifeArmor = new ModifierId(TinkersNH.MOD_ID, "blessing_of_life_armor");
     public static final ModifierId blessingOfLifeTool = new ModifierId(TinkersNH.MOD_ID, "blessing_of_life_tool");
