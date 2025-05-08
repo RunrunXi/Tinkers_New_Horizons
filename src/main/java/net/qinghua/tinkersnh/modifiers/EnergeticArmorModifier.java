@@ -56,6 +56,7 @@ public class EnergeticArmorModifier extends Modifier implements EquipmentChangeM
             living.getCapability(TinkerDataCapability.CAPABILITY).ifPresent((holder) -> {
                 // 获取属性等级
                 int level = holder.get(ENERGETIC_ARMOR, 0);
+                double speedAmount = 0.05 * level;  // 修改这个值调整速度，每级增加5%移速
                 // 移除原有速度属性修改
                 if (speed != null) {
                     speed.removeModifier(SPEED_UUID);
@@ -64,7 +65,7 @@ public class EnergeticArmorModifier extends Modifier implements EquipmentChangeM
                             new AttributeModifier(
                                     SPEED_UUID,
                                     SPEED_KEY,
-                                    0.05f * level,  // 修改这个值调整速度，每级增加5%移速
+                                    Math.min(speedAmount, 0.2), // 限制速度上限为20%
                                     AttributeModifier.Operation.MULTIPLY_TOTAL
                             )
                     );
