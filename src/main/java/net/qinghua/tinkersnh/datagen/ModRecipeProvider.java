@@ -131,7 +131,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 72, folder, "gravitonsteel");
 
         ItemCastingRecipeBuilder.tableRecipe(TinkersNH_Items.ENERGETIC_ALLOY_INGOT.get())
-                .setFluid(TinkersNH_Fluid.MOLTEN_ENERGETIC_ALLOY.get(), FluidValues.INGOT)
+                .setFluid(TinkerFluids.moltenGold.get(), FluidValues.INGOT)
                 .setCast(Tags.Items.DUSTS_REDSTONE, true)
                 .setCoolingTime(80)
                 .save(consumer, location(folder + "energetic_alloy/ingot"));
